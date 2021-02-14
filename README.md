@@ -79,3 +79,6 @@ SSL is a hierarchical model, so site's certificate is signet by someone, who is 
 8. Content of .crt is one we interrested to put is as variable in `cer.h`
 
 NB: all these certs are time limited, so don't forget to renew it
+
+Dependencies:
+1. [ESP32Ping](https://github.com/marian-craciunescu/ESP32Ping)
