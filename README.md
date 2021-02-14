@@ -6,7 +6,7 @@ The idea is to make a small screen witch will inform me about "Everything is goo
 
 ![this is how it looks](https://github.com/katurov/everything_is_fine/blob/main/IMG_4313.jpeg)
 
-Here is a rectangular model of net:
+Here is a triangular model of net:
 * Is here a WiFi itself? Is is my laptop slow or do I have problem with WiFi?
 * Ok, say, WiFi is ok, isn't my ISP good?
 * Ok, ISP is ok, is whole Internet fine?
