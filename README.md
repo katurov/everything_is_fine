@@ -30,6 +30,8 @@ Buttons:
 
 As all controllers ESP32 cannot deal with SSL in "normal PC"way, so we have to put SSL certificates directly on MCU and use it on every connection. Sometimes certificates will gone outdated, so we will need to update 'em in MCU.
 
+Another task in this row: get certificate from site and use it in code (see below).
+
 ## Materials
 
 1. TTGO ESP32
@@ -63,3 +65,17 @@ Do not forget to open User_Setup_Select.h of TFT_eSPI and:
 * comment  ` #include <User_Setup.h>`
 * uncomment `#include <User_Setups/Setup25_TTGO_T_Display.h>`
 
+## How to get CRTs
+
+SSL is a hierarchical model, so site's certificate is signet by someone, who is also signed. We have to use any: own OR signer's certificate to verify. Here is quick manual of how to get em. I made these certificates using my browser Safari and console command.
+
+1. Open the site you want to monitor
+2. Click on "lock" icon in address line
+3. This will show you a certificates panel
+4. Checkout one witch is nearest to ROOT one
+5. Drag'n'drop its icon from panel to folder
+6. Open folder in terminal
+7. Use: `openssl x509 -inform DER -in R3.cer -out R3.crt`
+8. Content of .crt is one we interrested to put is as variable in `cer.h`
+
+NB: all these certs are time limited, so don't forget to renew it
